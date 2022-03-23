@@ -2,13 +2,13 @@ var FtpDeploy = require("ftp-deploy");
 var ftpDeploy = new FtpDeploy();
 
 var config = {
-    user: "user",
+    user: "devhugoregadas",
     // Password optional, prompted if none given
     password: "password",
-    host: "ftp.someserver.com",
+    host: "nomades-js.web.app/angular-tour-of-heroes/dashboard",
     port: 21,
-    localRoot: __dirname + "/dist/<application-folder>",
-    remoteRoot: "/public_html/remote-folder/",
+    localRoot: __dirname + "/dist/angular-tour-of-heroes",
+    remoteRoot: "/public_html/",
     // include: ["*", "**/*"],      // this would upload everything except dot files
     include: ["*", "**/*", ".*"],
     // e.g. exclude sourcemaps, and ALL files in node_modules (including dot files)

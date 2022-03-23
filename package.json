@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy:ci": "ng deploy --base-href=/demo-cap/ --name=devhugoregadas --email=dev.hugoregadas@gmail.com --no-silent",
-    "deploy:ftp": "ng deploy --base-href=/demo-cap/ && node deploy"
+    "deploy:ftp": "ng deploy --base-href=/demo-cap/ && node deploy.js"
   },
   "private": true,
   "dependencies": {
