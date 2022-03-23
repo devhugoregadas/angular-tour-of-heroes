@@ -1,4 +1,4 @@
-name: Node.js CI
+name: My Angular Deploy Action
 
 on:
   push:
@@ -21,9 +21,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Prepare and deploy
+    - run: npm install
+    # - run: npm test
+    - run: npm run deploy:ci
       env:
+        CI: true
+        # Deploy env
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        npm install
-        npm run ng -- deploy --base-href=/angular-tour-of-heroes/ --name="devhugoregadas" --email="dev.hugoregadas@gmail.com" --no-silent
