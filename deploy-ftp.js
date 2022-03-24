@@ -1,14 +1,15 @@
+//https:ateliers.nomades.ch/~fazio/
 var FtpDeploy = require("ftp-deploy");
 var ftpDeploy = new FtpDeploy();
 
 var config = {
-    user: "devhugoregadas",
+    user: "fazio",
     // Password optional, prompted if none given
-    password: "password",
-    host: "nomades-js.web.app/angular-tour-of-heroes/dashboard",
+    password: "nicfaz",
+    host: "ateliers.nomades.ch",
     port: 21,
     localRoot: __dirname + "/dist/angular-tour-of-heroes",
-    remoteRoot: "/public_html/",
+    remoteRoot: "/public_html",
     // include: ["*", "**/*"],      // this would upload everything except dot files
     include: ["*", "**/*", ".*"],
     // e.g. exclude sourcemaps, and ALL files in node_modules (including dot files)
